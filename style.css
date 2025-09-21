@@ -1,0 +1,133 @@
+/* Base / reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utility container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header & Navigation */
+.site-header {
+  background: #222;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: none; /* hidden by default on mobile */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links li a {
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Blog Teaser */
+.blog-teaser ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.blog-teaser li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+.site-footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.site-footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Responsive / Breakpoints */
+@media(min-width: 768px) {
+  .nav {
+    display: block;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
